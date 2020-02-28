@@ -1,5 +1,11 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  width: 100px;
+  height: 10px;
+  colour: teal;
+`;
 
 const App = () => {
   const userInput = 27;
@@ -24,14 +30,19 @@ const App = () => {
   };
 
   return (
-    <div className="App">sss
+    <StyledApp>
         <p>
           Currency Convertor
         </p>
         {conversions.map(conversion => {
-          return calculator(conversion);
+          return (
+            <>
+              {name}
+              {calculator(conversion)}
+            </>
+          );
         })}
-    </div>
+    </StyledApp>
   );
 }
 
